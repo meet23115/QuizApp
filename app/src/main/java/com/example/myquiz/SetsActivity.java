@@ -21,7 +21,7 @@ public class SetsActivity extends AppCompatActivity {
 
     private GridView sets_grid;
     private FirebaseFirestore firestore;
-    private int category_id;
+    public static int category_id;
     private Dialog loadingDialog;
 
     @Override
