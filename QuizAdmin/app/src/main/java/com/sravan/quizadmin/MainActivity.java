@@ -43,7 +43,15 @@ public class MainActivity extends AppCompatActivity {
                 {
                     pass.setError(null);
                 }
+
+                firebaseLogin();
+
             }
         });
+    }
+
+    private void firebaseLogin()
+    {
+        
     }
 }
