@@ -3,6 +3,8 @@ package com.sravan.quizadmin;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -22,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText email, pass;
     private Button login;
     private FirebaseAuth firebaseAuth;
+    private Dialog loadingDialog;
 
 
     @Override
@@ -33,13 +36,10 @@ public class MainActivity extends AppCompatActivity {
         pass = findViewById(R.id.password);
         login = findViewById(R.id.loginB);
 
+        loadingDialog  = new Dialog(MainActivity.this);
+       // loadingDialog.setContentView(R.layout.);
+
         firebaseAuth = firebaseAuth.getInstance();
-
-
-
-
-
-
 
 
         login.setOnClickListener(new View.OnClickListener() {
@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
 
 
                 if(email.getText().toString().isEmpty()) {
-                    email.setError("Erter Email ID");
+                    email.setError("Enter Email ID");
                     return;
                 }
                 else
@@ -69,6 +69,12 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+        if(firebaseAuth.getCurrentUser() != null){
+            Intent intent = new Intent(MainActivity.this,CategoryActivity.class);
+            startActivity(intent);
+            finish();
+        }
     }
 
     private void firebaseLogin()
@@ -80,6 +86,9 @@ public class MainActivity extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             Toast.makeText(MainActivity.this, "Success", Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(MainActivity.this,CategoryActivity.class);
+                            startActivity(intent);
+                            finish();
                         } else {
                             // If sign in fails, display a message to the user.
                             Toast.makeText(MainActivity.this, "failure", Toast.LENGTH_SHORT).show();
