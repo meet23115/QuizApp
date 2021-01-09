@@ -38,7 +38,7 @@ public class CategoryActivity extends AppCompatActivity {
 
     private RecyclerView cat_recycler_view;
     private Button addCatB;
-    public List<CategoryModel> catList = new ArrayList<>();
+    public static List<CategoryModel> catList = new ArrayList<>();
     private FirebaseFirestore firestore;
     private EditText dialogCatName;
     private Button dialogAddB;

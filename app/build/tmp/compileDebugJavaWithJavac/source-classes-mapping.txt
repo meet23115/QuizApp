@@ -13,6 +13,9 @@ com/sravan/quizadmin/CategoryAdapter.java
  com.sravan.quizadmin.CategoryAdapter
  com.sravan.quizadmin.CategoryAdapter$ViewHolder
  com.sravan.quizadmin.CategoryAdapter$ViewHolder$1
+ com.sravan.quizadmin.CategoryAdapter$ViewHolder$1$1
+ com.sravan.quizadmin.CategoryAdapter$ViewHolder$2
+ com.sravan.quizadmin.CategoryAdapter$ViewHolder$3
 com/sravan/quizadmin/MainActivity.java
  com.sravan.quizadmin.MainActivity
  com.sravan.quizadmin.MainActivity$1
