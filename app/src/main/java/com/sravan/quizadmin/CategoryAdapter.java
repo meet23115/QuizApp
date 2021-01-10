@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -54,20 +55,53 @@ public class    CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Vie
         private TextView catName;
         private ImageView deleteB;
         private Dialog loadingDialog;
+        private Dialog editDialog;
+        private EditText editCatName;
+        private Button updatCatB;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             catName = itemView.findViewById(R.id.catName);
             deleteB = itemView.findViewById(R.id.catDelB);
 
-            loadingDialog  = new Dialog(itemView.getContext());
+            loadingDialog = new Dialog(itemView.getContext());
             loadingDialog.setContentView(R.layout.loading_progressbar);
             loadingDialog.setCancelable(false);
             loadingDialog.getWindow().setBackgroundDrawableResource(R.drawable.progress_background);
             loadingDialog.getWindow().setLayout(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+
+            editDialog = new Dialog(itemView.getContext());
+            editDialog.setContentView(R.layout.edit_category_layout);
+            editDialog.setCancelable(true);
+            editDialog.getWindow().setLayout(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+
+            editCatName = editDialog.findViewById(R.id.ec_cat_name);
+            updatCatB = editDialog.findViewById(R.id.ec_add_button);
         }
-        private void setData(String title, final int position, final CategoryAdapter adapter){
+
+        private void setData(String title, final int position, final CategoryAdapter adapter) {
             catName.setText(title);
+
+            itemView.setOnLongClickListener(new View.OnLongClickListener() {
+                @Override
+                public boolean onLongClick(View view) {
+                    editCatName.setText(cat_list.get(position).getName());
+                    editDialog.show();
+                    return false;
+                }
+            });
+
+            updatCatB.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (editCatName.getText().toString().isEmpty()) {
+                        editCatName.setError("Enter Category Name");
+                        return;
+                    }
+                    updateCategory(editCatName.getText().toString(), position, itemView.getContext(), adapter);
+                }
+            });
+
             deleteB.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -88,23 +122,20 @@ public class    CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Vie
                     dialog.getButton(dialog.BUTTON_NEGATIVE).setBackgroundColor(Color.RED);
 
                     LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-                    params.setMargins(0,0,50,0);
+                    params.setMargins(0, 0, 50, 0);
                     dialog.getButton(dialog.BUTTON_NEGATIVE).setLayoutParams(params);
 
                 }
             });
         }
 
-        private void deleteCategory(final int id, final Context context, CategoryAdapter adapter)
-        {
+        private void deleteCategory(final int id, final Context context, CategoryAdapter adapter) {
             loadingDialog.show();
             FirebaseFirestore firestore = FirebaseFirestore.getInstance();
-            Map<String,Object> catDoc = new ArrayMap<>();
-            int index=1;
-            for(int i=0; i<cat_list.size(); i++)
-            {
-                if(i!=id)
-                {
+            Map<String, Object> catDoc = new ArrayMap<>();
+            int index = 1;
+            for (int i = 0; i < cat_list.size(); i++) {
+                if (i != id) {
                     catDoc.put("CAT" + String.valueOf(index) + " ID ", cat_list.get(i).getId());
                     catDoc.put("CAT" + String.valueOf(index) + " NAME ", cat_list.get(i).getName());
                     index++;
@@ -127,11 +158,63 @@ public class    CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Vie
                     .addOnFailureListener(new OnFailureListener() {
                         @Override
                         public void onFailure(@NonNull Exception e) {
+                            Toast.makeText(context, e.getMessage(), Toast.LENGTH_SHORT).show();
+                            loadingDialog.dismiss();
+
+                        }
+                    });
+
+        }
+
+        private void updateCategory(final String catNewName, final int position, Context context, CategoryAdapter adapter)
+        {
+            editDialog.dismiss();
+            loadingDialog.show();
+            Map<String,Object> catData = new ArrayMap<>();
+            catData.put("NAME",catNewName);
+
+            FirebaseFirestore firestore = FirebaseFirestore.getInstance();
+            firestore.collection("QUIZ").document(cat_list.get(position).getId())
+                    .update(catData)
+                    .addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void aVoid) {
+
+                            Map<String,Object> catDoc = new ArrayMap<>();
+                            catDoc.put("CAT" + String.valueOf(position + 1) + "_NAME",catNewName);
+
+                            firestore.collection("QUIZ").document("Categories")
+                                    .update(catDoc)
+                                    .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                        @Override
+                                        public void onSuccess(Void aVoid) {
+                                            Toast.makeText(context, "Category Name Changed Successfully", Toast.LENGTH_SHORT).show();
+                                            CategoryActivity.catList.get(position).setName(catNewName);
+                                            adapter.notifyDataSetChanged();
+
+                                            loadingDialog.dismiss();
+                                        }
+                                    })
+                                    .addOnFailureListener(new OnFailureListener() {
+                                        @Override
+                                        public void onFailure(@NonNull Exception e) {
+                                            Toast.makeText(context,e.getMessage(),Toast.LENGTH_SHORT).show();
+                                            loadingDialog.dismiss();
+
+                                        }
+                                    });
+
+                        }
+                    })
+                    .addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
                             Toast.makeText(context,e.getMessage(),Toast.LENGTH_SHORT).show();
                             loadingDialog.dismiss();
 
                         }
                     });
+
 
         }
     }
