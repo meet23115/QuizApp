@@ -42,8 +42,7 @@ public class CategoryActivity extends AppCompatActivity {
     private Dialog loadingDialog;
 
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState, String setCounter) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category);
 
