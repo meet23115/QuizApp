@@ -160,8 +160,7 @@ public class SetsActivity extends AppCompatActivity {
                                 .addOnFailureListener(new OnFailureListener() {
                                     @Override
                                     public void onFailure(@NonNull Exception e) {
-                                        Toast.makeText(SetsActivity.this,e.getMessage(),Toast.LENGTH_SHORT).show();
-                                        loadingDialog.dismiss();
+
                                     }
                                 });
 
