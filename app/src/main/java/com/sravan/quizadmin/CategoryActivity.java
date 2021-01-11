@@ -155,7 +155,7 @@ public class CategoryActivity extends AppCompatActivity {
                                         String catName = document.getString("CAT" + String.valueOf(i) + "_NAME");
                                         String catid = document.getString("CAT" + String.valueOf(i) + "_ID");
 
-                                        catList.add(new CategoryModel(catid, catName, "0", setCounter: "1"));
+                                        catList.add(new CategoryModel(catid, catName, "0", setCounter:"1"));
                                     }
                                     adapter = new CategoryAdapter(catList);
                                     cat_recycler_view.setAdapter(adapter);
