@@ -40,6 +40,7 @@
         android:layout_height="wrap_content"
         android:text="Add New Categoty"
         android:textColor="@color/colorAccent"
+        android:textSize="18sp"
         android:padding="16dp"
         android:background="@color/colorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -42,9 +42,9 @@ public class SetsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sets);
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.sa_toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Categories");
+        getSupportActionBar().setTitle("Sets");
 
 
         setsView = findViewById(R.id.sets_recycler);
@@ -112,8 +112,8 @@ public class SetsActivity extends AppCompatActivity {
                 });
 
 
-        adapter = new SetAdapter(setsIDs);
-        setsView.setAdapter(adapter);
+       // adapter = new SetAdapter(setsIDs);
+       // setsView.setAdapter(adapter);
 
 
 
@@ -160,7 +160,8 @@ public class SetsActivity extends AppCompatActivity {
                                 .addOnFailureListener(new OnFailureListener() {
                                     @Override
                                     public void onFailure(@NonNull Exception e) {
-
+                                        Toast.makeText(SetsActivity.this,e.getMessage(),Toast.LENGTH_SHORT).show();
+                                        loadingDialog.dismiss();
                                     }
                                 });
 

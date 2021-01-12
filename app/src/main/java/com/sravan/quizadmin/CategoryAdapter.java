@@ -28,7 +28,7 @@ import java.util.Map;
 
 
 
-public class    CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHolder> {
+public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHolder> {
 
     private List<CategoryModel> cat_list;
     public CategoryAdapter(List<CategoryModel> cat_list)

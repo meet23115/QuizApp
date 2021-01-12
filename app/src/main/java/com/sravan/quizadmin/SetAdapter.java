@@ -76,7 +76,7 @@ public class SetAdapter extends RecyclerView.Adapter<SetAdapter.ViewHolder> {
             loadingDialog.getWindow().setLayout(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         }
 
-        private void setData(int pos, String setID, SetAdapter adapter )
+        private void setData(final int pos, final String setID, final SetAdapter adapter )
         {
             setName.setText("SET" + String.valueOf(pos + 1));
 

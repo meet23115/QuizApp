@@ -6,6 +6,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.ArrayMap;
 import android.util.Log;
@@ -19,6 +20,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
@@ -64,18 +66,13 @@ public class CategoryActivity extends AppCompatActivity {
         loadingDialog.getWindow().setBackgroundDrawableResource(R.drawable.progress_background);
         loadingDialog.getWindow().setLayout(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
 
+        addCatDialog = new Dialog(CategoryActivity.this);
+        addCatDialog.setContentView(R.layout.add_category_dialog);
+        addCatDialog.setCancelable(true);
+        addCatDialog.getWindow().setLayout(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
 
-
-
-            addCatDialog = new Dialog(CategoryActivity.this);
-            addCatDialog.setContentView(R.layout.add_category_dialog);
-            addCatDialog.setCancelable(true);
-            addCatDialog.getWindow().setLayout(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-
-
-
-        dialogCatName = findViewById(R.id.ac_cat_name);
-        dialogAddB = findViewById(R.id.addCatB);
+        dialogCatName = addCatDialog.findViewById(R.id.ac_cat_name);
+        dialogAddB = addCatDialog.findViewById(R.id.ac_add_button);
 
         firestore = FirebaseFirestore.getInstance();
 
@@ -102,7 +99,6 @@ public class CategoryActivity extends AppCompatActivity {
             cat_recycler_view.setLayoutManager(layoutManager);
 
             loadData2(setCounter);
-
 
     }
 
@@ -140,60 +136,66 @@ public class CategoryActivity extends AppCompatActivity {
         catList.clear();
 
         firestore.collection("QUIZ").document("Categories")
-                .get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-                    private static final String TAG = "" ;
+                .get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
 
-                    @Override
-                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                        if (task.isSuccessful()) {
-                            for (QueryDocumentSnapshot document : task.getResult()) {
-                                Log.d(TAG, document.getId() + " => " + document.getData());
-                                if(document.exists()) {
+                if (task.isSuccessful())
+                {
+                    DocumentSnapshot doc = task.getResult();
 
-                                    long count = (long) document.get("COUNT");
-                                    for (int i = 1; i <= count; i++) {
-                                        String catName = document.getString("CAT" + String.valueOf(i) + "_NAME");
-                                        String catid = document.getString("CAT" + String.valueOf(i) + "_ID");
+                    if (doc.exists())
+                    {
+                        long count = (long) doc.get("COUNT");
 
-                                        catList.add(new CategoryModel(catid, catName, "0", setCounter:"1"));
-                                    }
-                                    adapter = new CategoryAdapter(catList);
-                                    cat_recycler_view.setAdapter(adapter);
+                        for(int i = 1; i <= count; i++)
+                        {
+                            String catName = doc.getString("CAT" + String.valueOf(i) + "_NAME");
+                            String catid = doc.getString("CAT" + String.valueOf(i) + "_ID");
 
-                                }
-                                else {
-                                    Toast.makeText(CategoryActivity.this, "No category document Found", Toast.LENGTH_SHORT).show();
-                                    finish();
-                                }
-                            }
-                        } else {
-
-                            Log.w(TAG, "Error getting documents.", task.getException());
+                            catList.add(new CategoryModel(catid, catName, "0", "1"));
                         }
+
+                        adapter = new CategoryAdapter(catList);
+                        cat_recycler_view.setAdapter(adapter);
+
                     }
-                });
+                    else
+                    {
+                        Toast.makeText(CategoryActivity.this,"No Category Document Exists!",Toast.LENGTH_SHORT).show();
+                        finish();
+                    }
+                }
+                else
+                {
+                    Toast.makeText(CategoryActivity.this,task.getException().getMessage(),Toast.LENGTH_SHORT).show();
+                }
+
+                loadingDialog.dismiss();
+
+            }
+        });
     }
-
-
-
 
     private void addNewCategory(String title, String setCounter){
         addCatDialog.dismiss();
+        loadingDialog.show();
 
         Map<String, Object> catData = new ArrayMap<>();
-        catData.put("NAME", title);
-        catData.put("SETS",0);
+        catData.put("Name", title);
+        catData.put("SETS", 0);
         catData.put("COUNTER" , "1");
 
         String doc_id = firestore.collection("QUIZ").document().getId();
 
-        firestore.collection("QUIZ").document(doc_id).set(catData).addOnSuccessListener(new OnSuccessListener<Void>() {
+        firestore.collection("QUIZ").document(doc_id)
+                .set(catData).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void aVoid) {
 
                 Map<String, Object> catDoc = new ArrayMap<>();
                 catDoc.put("CAT" + String.valueOf(catList.size() +1) +"_NAME",title);
-                catDoc.put("CAT" + String.valueOf(catList.size() +1) +"_NAME",doc_id);
+                catDoc.put("CAT" + String.valueOf(catList.size() +1) +"_ID",doc_id);
                 catDoc.put("COUNT",catList.size() + 1);
 
                 firestore.collection("QUIZ").document("Categories")
@@ -203,14 +205,16 @@ public class CategoryActivity extends AppCompatActivity {
                             public void onSuccess(Void aVoid) {
                                 Toast.makeText(CategoryActivity.this, "Category added successfully", Toast.LENGTH_SHORT).show();
 
-                                catList.add(new CategoryModel(doc_id,title,"0", setCounter: "1"));
+                                catList.add(new CategoryModel(doc_id,title,"0", "1"));
                                 adapter.notifyItemInserted(catList.size());
+                                loadingDialog.dismiss();
 
                             }
                         }).addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
                         Toast.makeText(CategoryActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                        loadingDialog.dismiss();
                     }
                 });
 
@@ -219,7 +223,7 @@ public class CategoryActivity extends AppCompatActivity {
             @Override
             public void onFailure(@NonNull Exception e) {
                 Toast.makeText(CategoryActivity.this,e.getMessage(), Toast.LENGTH_SHORT).show();
-
+                loadingDialog.dismiss();
             }
         });
     }
