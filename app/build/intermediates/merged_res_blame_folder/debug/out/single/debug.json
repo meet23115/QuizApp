@@ -24,6 +24,10 @@
         "source": "C:\\Users\\14389\\AndroidStudioProjects\\QuizAdmin\\app\\src\\main\\res\\drawable-xxhdpi\\delete_icon.png"
     },
     {
+        "merged": "C:\\Users\\14389\\AndroidStudioProjects\\QuizAdmin\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_questions.xml.flat",
+        "source": "C:\\Users\\14389\\AndroidStudioProjects\\QuizAdmin\\app\\src\\main\\res\\layout\\activity_questions.xml"
+    },
+    {
         "merged": "C:\\Users\\14389\\AndroidStudioProjects\\QuizAdmin\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
         "source": "C:\\Users\\14389\\AndroidStudioProjects\\QuizAdmin\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
     },
@@ -32,16 +36,28 @@
         "source": "C:\\Users\\14389\\AndroidStudioProjects\\QuizAdmin\\app\\src\\main\\res\\drawable-hdpi\\delete_icon.png"
     },
     {
+        "merged": "C:\\Users\\14389\\AndroidStudioProjects\\QuizAdmin\\app\\build\\intermediates\\res\\merged\\debug\\drawable_progress_background.xml.flat",
+        "source": "C:\\Users\\14389\\AndroidStudioProjects\\QuizAdmin\\app\\src\\main\\res\\drawable\\progress_background.xml"
+    },
+    {
         "merged": "C:\\Users\\14389\\AndroidStudioProjects\\QuizAdmin\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi_delete_icon.xml.flat",
         "source": "C:\\Users\\14389\\AndroidStudioProjects\\QuizAdmin\\app\\src\\main\\res\\drawable-anydpi\\delete_icon.xml"
     },
     {
-        "merged": "C:\\Users\\14389\\AndroidStudioProjects\\QuizAdmin\\app\\build\\intermediates\\res\\merged\\debug\\drawable_main_background.xml.flat",
-        "source": "C:\\Users\\14389\\AndroidStudioProjects\\QuizAdmin\\app\\src\\main\\res\\drawable\\main_background.xml"
+        "merged": "C:\\Users\\14389\\AndroidStudioProjects\\QuizAdmin\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_sets.xml.flat",
+        "source": "C:\\Users\\14389\\AndroidStudioProjects\\QuizAdmin\\app\\src\\main\\res\\layout\\activity_sets.xml"
     },
     {
         "merged": "C:\\Users\\14389\\AndroidStudioProjects\\QuizAdmin\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "C:\\Users\\14389\\AndroidStudioProjects\\QuizAdmin\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\14389\\AndroidStudioProjects\\QuizAdmin\\app\\build\\intermediates\\res\\merged\\debug\\layout_edit_category_layout.xml.flat",
+        "source": "C:\\Users\\14389\\AndroidStudioProjects\\QuizAdmin\\app\\src\\main\\res\\layout\\edit_category_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\14389\\AndroidStudioProjects\\QuizAdmin\\app\\build\\intermediates\\res\\merged\\debug\\drawable_main_background.xml.flat",
+        "source": "C:\\Users\\14389\\AndroidStudioProjects\\QuizAdmin\\app\\src\\main\\res\\drawable\\main_background.xml"
     },
     {
         "merged": "C:\\Users\\14389\\AndroidStudioProjects\\QuizAdmin\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_delete_icon.png.flat",
@@ -70,6 +86,10 @@
     {
         "merged": "C:\\Users\\14389\\AndroidStudioProjects\\QuizAdmin\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_category.xml.flat",
         "source": "C:\\Users\\14389\\AndroidStudioProjects\\QuizAdmin\\app\\src\\main\\res\\layout\\activity_category.xml"
+    },
+    {
+        "merged": "C:\\Users\\14389\\AndroidStudioProjects\\QuizAdmin\\app\\build\\intermediates\\res\\merged\\debug\\layout_loading_progressbar.xml.flat",
+        "source": "C:\\Users\\14389\\AndroidStudioProjects\\QuizAdmin\\app\\src\\main\\res\\layout\\loading_progressbar.xml"
     },
     {
         "merged": "C:\\Users\\14389\\AndroidStudioProjects\\QuizAdmin\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",

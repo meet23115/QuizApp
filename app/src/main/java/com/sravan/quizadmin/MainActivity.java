@@ -3,10 +3,12 @@ package com.sravan.quizadmin;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -23,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText email, pass;
     private Button login;
     private FirebaseAuth firebaseAuth;
+    private Dialog loadingDialog;
 
 
     @Override
@@ -33,6 +36,13 @@ public class MainActivity extends AppCompatActivity {
         email = findViewById(R.id.email);
         pass = findViewById(R.id.password);
         login = findViewById(R.id.loginB);
+
+        loadingDialog = new Dialog(MainActivity.this);
+        loadingDialog.setContentView(R.layout.loading_progressbar);
+        loadingDialog.setCancelable(false);
+        loadingDialog.getWindow().setBackgroundDrawableResource(R.drawable.progress_background);
+        loadingDialog.getWindow().setLayout(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT);
+
 
         firebaseAuth = firebaseAuth.getInstance();
 
@@ -69,13 +79,16 @@ public class MainActivity extends AppCompatActivity {
 
         if(firebaseAuth.getCurrentUser() != null)
         {
-         //Intent intent = new Intent(MainActivity.this,CategoryActivity.class);
-            //startActivity(intent);
+            Intent intent = new Intent(MainActivity.this,CategoryActivity.class);
+            startActivity(intent);
+            finish();
         }
     }
 
     private void firebaseLogin()
     {
+        loadingDialog.show();
+
         firebaseAuth.signInWithEmailAndPassword(email.getText().toString(), pass.getText().toString())
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -87,12 +100,16 @@ public class MainActivity extends AppCompatActivity {
 
                          Intent intent = new Intent(MainActivity.this,CategoryActivity.class);
                          startActivity(intent);
+                         finish();
 
                         } else {
                             // If sign in fails, display a message to the user.
                             Toast.makeText(MainActivity.this, "failure", Toast.LENGTH_SHORT).show();
 
                         }
+
+                        loadingDialog.dismiss();
+
                     }
                 });
     }
