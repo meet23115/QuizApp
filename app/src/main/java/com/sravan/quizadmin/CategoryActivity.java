@@ -165,6 +165,7 @@ public class CategoryActivity extends AppCompatActivity {
     }
 
 
+
     private void addNewCategory(String title){
         addCatDialog.dismiss();
 
