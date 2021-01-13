@@ -44,15 +44,14 @@ public class CategoryActivity extends AppCompatActivity {
     private Button dialogAddB;
     private Dialog addCatDialog;
     private CategoryAdapter adapter;
-
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category);
-
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        toolbar = findViewById(R.id.toolbar);
+       //setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Categories");
 
         cat_recycler_view = findViewById(R.id.cat_recycler);
@@ -144,8 +143,11 @@ public class CategoryActivity extends AppCompatActivity {
                                 Log.d(TAG, document.getId() + " => " + document.getData());
                                 if(document.exists()) {
 
-                                    long count = (long) document.get("COUNT");
-                                    for (int i = 1; i <= count; i++) {
+                                    //long count = (long) document.get("COUNT");
+
+
+
+                                    for (int i = 1; i<= task.getResult().size(); i++) {
                                         String catName = document.getString("CAT" + String.valueOf(i) + "_NAME");
                                         String catid = document.getString("CAT" + String.valueOf(i) + "_ID");
                                         catList.add(new CategoryModel(catid, catName, "0"));
