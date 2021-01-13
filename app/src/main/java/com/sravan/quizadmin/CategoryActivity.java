@@ -59,9 +59,6 @@ public class CategoryActivity extends AppCompatActivity {
 
         List<String> catList = new ArrayList<>();
 
-        //catList.add("GK");
-        //catList.add("Maths");
-
         dialogCatName = findViewById(R.id.ac_cat_name);
         dialogAddB = findViewById(R.id.addCatB);
 
