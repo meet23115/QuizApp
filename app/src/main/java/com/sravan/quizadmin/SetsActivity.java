@@ -36,6 +36,7 @@ public class SetsActivity extends AppCompatActivity {
     private Dialog loadingDialog;
 
     public static List<String> setsIDs = new ArrayList<>();
+    public static int selected_set_index = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

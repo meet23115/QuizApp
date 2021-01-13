@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.util.ArrayMap;
 import android.view.LayoutInflater;
@@ -29,6 +30,7 @@ import java.util.Map;
 
 import static com.sravan.quizadmin.CategoryActivity.catList;
 import static com.sravan.quizadmin.CategoryActivity.selected_cat_index;
+import static com.sravan.quizadmin.SetsActivity.selected_set_index;
 
 public class SetAdapter extends RecyclerView.Adapter<SetAdapter.ViewHolder> {
 
@@ -79,6 +81,17 @@ public class SetAdapter extends RecyclerView.Adapter<SetAdapter.ViewHolder> {
         private void setData(final int pos, final String setID, final SetAdapter adapter )
         {
             setName.setText("SET" + String.valueOf(pos + 1));
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                    selected_set_index = pos;
+
+                    Intent intent = new Intent(itemView.getContext(),QuestionsActivity.class);
+                    itemView.getContext().startActivity(intent);
+                }
+            });
 
             deleteSetB.setOnClickListener(new View.OnClickListener(){
                 @Override
