@@ -1,118 +1,126 @@
 [
     {
-        "merged": "C:\\Users\\student\\AndroidStudioProjects\\MYQuiz\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_question.xml.flat",
-        "source": "C:\\Users\\student\\AndroidStudioProjects\\MYQuiz\\app\\src\\main\\res\\layout\\activity_question.xml"
+        "merged": "C:\\Users\\14389\\AndroidStudioProjects\\MyQuizLocal\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_score.xml.flat",
+        "source": "C:\\Users\\14389\\AndroidStudioProjects\\MyQuizLocal\\app\\src\\main\\res\\layout\\activity_score.xml"
     },
     {
-        "merged": "C:\\Users\\student\\AndroidStudioProjects\\MYQuiz\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\student\\AndroidStudioProjects\\MYQuiz\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\14389\\AndroidStudioProjects\\MyQuizLocal\\app\\build\\intermediates\\res\\merged\\debug\\layout_set_item_layout.xml.flat",
+        "source": "C:\\Users\\14389\\AndroidStudioProjects\\MyQuizLocal\\app\\src\\main\\res\\layout\\set_item_layout.xml"
     },
     {
-        "merged": "C:\\Users\\student\\AndroidStudioProjects\\MYQuiz\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\student\\AndroidStudioProjects\\MYQuiz\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+        "merged": "C:\\Users\\14389\\AndroidStudioProjects\\MyQuizLocal\\app\\build\\intermediates\\res\\merged\\debug\\drawable_gradient_background.xml.flat",
+        "source": "C:\\Users\\14389\\AndroidStudioProjects\\MyQuizLocal\\app\\src\\main\\res\\drawable\\gradient_background.xml"
     },
     {
-        "merged": "C:\\Users\\student\\AndroidStudioProjects\\MYQuiz\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_score.xml.flat",
-        "source": "C:\\Users\\student\\AndroidStudioProjects\\MYQuiz\\app\\src\\main\\res\\layout\\activity_score.xml"
+        "merged": "C:\\Users\\14389\\AndroidStudioProjects\\MyQuizLocal\\app\\build\\intermediates\\res\\merged\\debug\\drawable_progress_background.xml.flat",
+        "source": "C:\\Users\\14389\\AndroidStudioProjects\\MyQuizLocal\\app\\src\\main\\res\\drawable\\progress_background.xml"
     },
     {
-        "merged": "C:\\Users\\student\\AndroidStudioProjects\\MYQuiz\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_sets.xml.flat",
-        "source": "C:\\Users\\student\\AndroidStudioProjects\\MYQuiz\\app\\src\\main\\res\\layout\\activity_sets.xml"
+        "merged": "C:\\Users\\14389\\AndroidStudioProjects\\MyQuizLocal\\app\\build\\intermediates\\res\\merged\\debug\\drawable_border.xml.flat",
+        "source": "C:\\Users\\14389\\AndroidStudioProjects\\MyQuizLocal\\app\\src\\main\\res\\drawable\\border.xml"
     },
     {
-        "merged": "C:\\Users\\student\\AndroidStudioProjects\\MYQuiz\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_splash.xml.flat",
-        "source": "C:\\Users\\student\\AndroidStudioProjects\\MYQuiz\\app\\src\\main\\res\\layout\\activity_splash.xml"
+        "merged": "C:\\Users\\14389\\AndroidStudioProjects\\MyQuizLocal\\app\\build\\intermediates\\res\\merged\\debug\\layout_cat_item_layout.xml.flat",
+        "source": "C:\\Users\\14389\\AndroidStudioProjects\\MyQuizLocal\\app\\src\\main\\res\\layout\\cat_item_layout.xml"
     },
     {
-        "merged": "C:\\Users\\student\\AndroidStudioProjects\\MYQuiz\\app\\build\\intermediates\\res\\merged\\debug\\font_blacklist.ttf.flat",
-        "source": "C:\\Users\\student\\AndroidStudioProjects\\MYQuiz\\app\\src\\main\\res\\font\\blacklist.ttf"
+        "merged": "C:\\Users\\14389\\AndroidStudioProjects\\MyQuizLocal\\app\\build\\intermediates\\res\\merged\\debug\\drawable_main_background.xml.flat",
+        "source": "C:\\Users\\14389\\AndroidStudioProjects\\MyQuizLocal\\app\\src\\main\\res\\drawable\\main_background.xml"
     },
     {
-        "merged": "C:\\Users\\student\\AndroidStudioProjects\\MYQuiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable_logo.png.flat",
-        "source": "C:\\Users\\student\\AndroidStudioProjects\\MYQuiz\\app\\src\\main\\res\\drawable\\logo.png"
+        "merged": "C:\\Users\\14389\\AndroidStudioProjects\\MyQuizLocal\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\14389\\AndroidStudioProjects\\MyQuizLocal\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\student\\AndroidStudioProjects\\MYQuiz\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\student\\AndroidStudioProjects\\MYQuiz\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\14389\\AndroidStudioProjects\\MyQuizLocal\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\14389\\AndroidStudioProjects\\MyQuizLocal\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\student\\AndroidStudioProjects\\MYQuiz\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\student\\AndroidStudioProjects\\MYQuiz\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\14389\\AndroidStudioProjects\\MyQuizLocal\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\14389\\AndroidStudioProjects\\MyQuizLocal\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\student\\AndroidStudioProjects\\MYQuiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\student\\AndroidStudioProjects\\MYQuiz\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+        "merged": "C:\\Users\\14389\\AndroidStudioProjects\\MyQuizLocal\\app\\build\\intermediates\\res\\merged\\debug\\drawable_logo.png.flat",
+        "source": "C:\\Users\\14389\\AndroidStudioProjects\\MyQuizLocal\\app\\src\\main\\res\\drawable\\logo.png"
     },
     {
-        "merged": "C:\\Users\\student\\AndroidStudioProjects\\MYQuiz\\app\\build\\intermediates\\res\\merged\\debug\\anim_myanim.xml.flat",
-        "source": "C:\\Users\\student\\AndroidStudioProjects\\MYQuiz\\app\\src\\main\\res\\anim\\myanim.xml"
+        "merged": "C:\\Users\\14389\\AndroidStudioProjects\\MyQuizLocal\\app\\build\\intermediates\\res\\merged\\debug\\font_blacklist.ttf.flat",
+        "source": "C:\\Users\\14389\\AndroidStudioProjects\\MyQuizLocal\\app\\src\\main\\res\\font\\blacklist.ttf"
     },
     {
-        "merged": "C:\\Users\\student\\AndroidStudioProjects\\MYQuiz\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\student\\AndroidStudioProjects\\MYQuiz\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\14389\\AndroidStudioProjects\\MyQuizLocal\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_category.xml.flat",
+        "source": "C:\\Users\\14389\\AndroidStudioProjects\\MyQuizLocal\\app\\src\\main\\res\\layout\\activity_category.xml"
     },
     {
-        "merged": "C:\\Users\\student\\AndroidStudioProjects\\MYQuiz\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\student\\AndroidStudioProjects\\MYQuiz\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\14389\\AndroidStudioProjects\\MyQuizLocal\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\14389\\AndroidStudioProjects\\MyQuizLocal\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\student\\AndroidStudioProjects\\MYQuiz\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\student\\AndroidStudioProjects\\MYQuiz\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\14389\\AndroidStudioProjects\\MyQuizLocal\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\14389\\AndroidStudioProjects\\MyQuizLocal\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\student\\AndroidStudioProjects\\MYQuiz\\app\\build\\intermediates\\res\\merged\\debug\\layout_set_item_layout.xml.flat",
-        "source": "C:\\Users\\student\\AndroidStudioProjects\\MYQuiz\\app\\src\\main\\res\\layout\\set_item_layout.xml"
+        "merged": "C:\\Users\\14389\\AndroidStudioProjects\\MyQuizLocal\\app\\build\\intermediates\\res\\merged\\debug\\drawable_round_corner.xml.flat",
+        "source": "C:\\Users\\14389\\AndroidStudioProjects\\MyQuizLocal\\app\\src\\main\\res\\drawable\\round_corner.xml"
     },
     {
-        "merged": "C:\\Users\\student\\AndroidStudioProjects\\MYQuiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable_border.xml.flat",
-        "source": "C:\\Users\\student\\AndroidStudioProjects\\MYQuiz\\app\\src\\main\\res\\drawable\\border.xml"
+        "merged": "C:\\Users\\14389\\AndroidStudioProjects\\MyQuizLocal\\app\\build\\intermediates\\res\\merged\\debug\\anim_myanim.xml.flat",
+        "source": "C:\\Users\\14389\\AndroidStudioProjects\\MyQuizLocal\\app\\src\\main\\res\\anim\\myanim.xml"
     },
     {
-        "merged": "C:\\Users\\student\\AndroidStudioProjects\\MYQuiz\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\student\\AndroidStudioProjects\\MYQuiz\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\14389\\AndroidStudioProjects\\MyQuizLocal\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_splash.xml.flat",
+        "source": "C:\\Users\\14389\\AndroidStudioProjects\\MyQuizLocal\\app\\src\\main\\res\\layout\\activity_splash.xml"
     },
     {
-        "merged": "C:\\Users\\student\\AndroidStudioProjects\\MYQuiz\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\student\\AndroidStudioProjects\\MYQuiz\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "C:\\Users\\14389\\AndroidStudioProjects\\MyQuizLocal\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\14389\\AndroidStudioProjects\\MyQuizLocal\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\student\\AndroidStudioProjects\\MYQuiz\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\student\\AndroidStudioProjects\\MYQuiz\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\14389\\AndroidStudioProjects\\MyQuizLocal\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_sets.xml.flat",
+        "source": "C:\\Users\\14389\\AndroidStudioProjects\\MyQuizLocal\\app\\src\\main\\res\\layout\\activity_sets.xml"
     },
     {
-        "merged": "C:\\Users\\student\\AndroidStudioProjects\\MYQuiz\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\student\\AndroidStudioProjects\\MYQuiz\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\14389\\AndroidStudioProjects\\MyQuizLocal\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\14389\\AndroidStudioProjects\\MyQuizLocal\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\student\\AndroidStudioProjects\\MYQuiz\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\student\\AndroidStudioProjects\\MYQuiz\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\14389\\AndroidStudioProjects\\MyQuizLocal\\app\\build\\intermediates\\res\\merged\\debug\\layout_loading_progressbar.xml.flat",
+        "source": "C:\\Users\\14389\\AndroidStudioProjects\\MyQuizLocal\\app\\src\\main\\res\\layout\\loading_progressbar.xml"
     },
     {
-        "merged": "C:\\Users\\student\\AndroidStudioProjects\\MYQuiz\\app\\build\\intermediates\\res\\merged\\debug\\layout_cat_item_layout.xml.flat",
-        "source": "C:\\Users\\student\\AndroidStudioProjects\\MYQuiz\\app\\src\\main\\res\\layout\\cat_item_layout.xml"
+        "merged": "C:\\Users\\14389\\AndroidStudioProjects\\MyQuizLocal\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\14389\\AndroidStudioProjects\\MyQuizLocal\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\student\\AndroidStudioProjects\\MYQuiz\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\student\\AndroidStudioProjects\\MYQuiz\\app\\src\\main\\res\\layout\\activity_main.xml"
+        "merged": "C:\\Users\\14389\\AndroidStudioProjects\\MyQuizLocal\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\14389\\AndroidStudioProjects\\MyQuizLocal\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
-        "merged": "C:\\Users\\student\\AndroidStudioProjects\\MYQuiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable_main_background.xml.flat",
-        "source": "C:\\Users\\student\\AndroidStudioProjects\\MYQuiz\\app\\src\\main\\res\\drawable\\main_background.xml"
+        "merged": "C:\\Users\\14389\\AndroidStudioProjects\\MyQuizLocal\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\14389\\AndroidStudioProjects\\MyQuizLocal\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "C:\\Users\\student\\AndroidStudioProjects\\MYQuiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable_round_corner.xml.flat",
-        "source": "C:\\Users\\student\\AndroidStudioProjects\\MYQuiz\\app\\src\\main\\res\\drawable\\round_corner.xml"
+        "merged": "C:\\Users\\14389\\AndroidStudioProjects\\MyQuizLocal\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\14389\\AndroidStudioProjects\\MyQuizLocal\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\student\\AndroidStudioProjects\\MYQuiz\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_category.xml.flat",
-        "source": "C:\\Users\\student\\AndroidStudioProjects\\MYQuiz\\app\\src\\main\\res\\layout\\activity_category.xml"
+        "merged": "C:\\Users\\14389\\AndroidStudioProjects\\MyQuizLocal\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\14389\\AndroidStudioProjects\\MyQuizLocal\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
-        "merged": "C:\\Users\\student\\AndroidStudioProjects\\MYQuiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable_gradient_background.xml.flat",
-        "source": "C:\\Users\\student\\AndroidStudioProjects\\MYQuiz\\app\\src\\main\\res\\drawable\\gradient_background.xml"
+        "merged": "C:\\Users\\14389\\AndroidStudioProjects\\MyQuizLocal\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\14389\\AndroidStudioProjects\\MyQuizLocal\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\student\\AndroidStudioProjects\\MYQuiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Users\\student\\AndroidStudioProjects\\MYQuiz\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+        "merged": "C:\\Users\\14389\\AndroidStudioProjects\\MyQuizLocal\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\14389\\AndroidStudioProjects\\MyQuizLocal\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\14389\\AndroidStudioProjects\\MyQuizLocal\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\14389\\AndroidStudioProjects\\MyQuizLocal\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\14389\\AndroidStudioProjects\\MyQuizLocal\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_question.xml.flat",
+        "source": "C:\\Users\\14389\\AndroidStudioProjects\\MyQuizLocal\\app\\src\\main\\res\\layout\\activity_question.xml"
     }
 ]

@@ -6,69 +6,113 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="23"
-8-->C:\Users\student\AndroidStudioProjects\MYQuiz\app\src\main\AndroidManifest.xml
+8-->C:\Users\14389\AndroidStudioProjects\MyQuizLocal\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="29" />
-9-->C:\Users\student\AndroidStudioProjects\MYQuiz\app\src\main\AndroidManifest.xml
+9-->C:\Users\14389\AndroidStudioProjects\MyQuizLocal\app\src\main\AndroidManifest.xml
 10
-11    <application
-11-->C:\Users\student\AndroidStudioProjects\MYQuiz\app\src\main\AndroidManifest.xml:5:5-30:19
-12        android:allowBackup="true"
-12-->C:\Users\student\AndroidStudioProjects\MYQuiz\app\src\main\AndroidManifest.xml:6:9-35
-13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-13-->[androidx.core:core:1.3.1] C:\Users\student\.gradle\caches\transforms-2\files-2.1\ff37b710ecf84191a2687617c776753e\core-1.3.1\AndroidManifest.xml:24:18-86
-14        android:debuggable="true"
-15        android:extractNativeLibs="false"
-16        android:icon="@mipmap/ic_launcher"
-16-->C:\Users\student\AndroidStudioProjects\MYQuiz\app\src\main\AndroidManifest.xml:7:9-43
-17        android:label="@string/app_name"
-17-->C:\Users\student\AndroidStudioProjects\MYQuiz\app\src\main\AndroidManifest.xml:8:9-41
-18        android:roundIcon="@mipmap/ic_launcher_round"
-18-->C:\Users\student\AndroidStudioProjects\MYQuiz\app\src\main\AndroidManifest.xml:9:9-54
-19        android:supportsRtl="true"
-19-->C:\Users\student\AndroidStudioProjects\MYQuiz\app\src\main\AndroidManifest.xml:10:9-35
-20        android:testOnly="true"
-21        android:theme="@style/Theme.MYQuiz" >
-21-->C:\Users\student\AndroidStudioProjects\MYQuiz\app\src\main\AndroidManifest.xml:11:9-44
-22        <activity android:name="com.example.myquiz.ScoreActivity" />
-22-->C:\Users\student\AndroidStudioProjects\MYQuiz\app\src\main\AndroidManifest.xml:12:9-60
-22-->C:\Users\student\AndroidStudioProjects\MYQuiz\app\src\main\AndroidManifest.xml:12:19-48
-23        <activity android:name="com.example.myquiz.QuestionActivity" />
-23-->C:\Users\student\AndroidStudioProjects\MYQuiz\app\src\main\AndroidManifest.xml:13:9-54
-23-->C:\Users\student\AndroidStudioProjects\MYQuiz\app\src\main\AndroidManifest.xml:13:19-51
-24        <activity android:name="com.example.myquiz.SetsActivity" />
-24-->C:\Users\student\AndroidStudioProjects\MYQuiz\app\src\main\AndroidManifest.xml:14:9-50
-24-->C:\Users\student\AndroidStudioProjects\MYQuiz\app\src\main\AndroidManifest.xml:14:19-47
-25        <activity android:name="com.example.myquiz.CategoryActivity" />
-25-->C:\Users\student\AndroidStudioProjects\MYQuiz\app\src\main\AndroidManifest.xml:15:9-54
-25-->C:\Users\student\AndroidStudioProjects\MYQuiz\app\src\main\AndroidManifest.xml:15:19-51
-26        <activity android:name="com.example.myquiz.SplashActivity" >
-26-->C:\Users\student\AndroidStudioProjects\MYQuiz\app\src\main\AndroidManifest.xml:16:9-22:20
-26-->C:\Users\student\AndroidStudioProjects\MYQuiz\app\src\main\AndroidManifest.xml:16:19-49
-27            <intent-filter>
-27-->C:\Users\student\AndroidStudioProjects\MYQuiz\app\src\main\AndroidManifest.xml:17:13-21:29
-28                <action android:name="android.intent.action.MAIN" />
-28-->C:\Users\student\AndroidStudioProjects\MYQuiz\app\src\main\AndroidManifest.xml:18:17-69
-28-->C:\Users\student\AndroidStudioProjects\MYQuiz\app\src\main\AndroidManifest.xml:18:25-66
-29
-30                <category android:name="android.intent.category.LAUNCHER" />
-30-->C:\Users\student\AndroidStudioProjects\MYQuiz\app\src\main\AndroidManifest.xml:20:17-77
-30-->C:\Users\student\AndroidStudioProjects\MYQuiz\app\src\main\AndroidManifest.xml:20:27-74
-31            </intent-filter>
-32        </activity>
-33        <activity android:name="com.example.myquiz.MainActivity" >
-33-->C:\Users\student\AndroidStudioProjects\MYQuiz\app\src\main\AndroidManifest.xml:23:9-29:20
-33-->C:\Users\student\AndroidStudioProjects\MYQuiz\app\src\main\AndroidManifest.xml:23:19-47
-34            <intent-filter>
-34-->C:\Users\student\AndroidStudioProjects\MYQuiz\app\src\main\AndroidManifest.xml:17:13-21:29
-35                <action android:name="android.intent.action.MAIN" />
-35-->C:\Users\student\AndroidStudioProjects\MYQuiz\app\src\main\AndroidManifest.xml:18:17-69
-35-->C:\Users\student\AndroidStudioProjects\MYQuiz\app\src\main\AndroidManifest.xml:18:25-66
-36
-37                <category android:name="android.intent.category.LAUNCHER" />
-37-->C:\Users\student\AndroidStudioProjects\MYQuiz\app\src\main\AndroidManifest.xml:20:17-77
-37-->C:\Users\student\AndroidStudioProjects\MYQuiz\app\src\main\AndroidManifest.xml:20:27-74
-38            </intent-filter>
+11    <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
+12    <!-- <uses-sdk android:minSdkVersion="14" /> -->
+13    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+13-->[com.google.firebase:firebase-firestore:22.0.0] C:\Users\14389\.gradle\caches\transforms-2\files-2.1\7b396bb215b803305333f11cee85c0f1\jetified-firebase-firestore-22.0.0\AndroidManifest.xml:13:5-79
+13-->[com.google.firebase:firebase-firestore:22.0.0] C:\Users\14389\.gradle\caches\transforms-2\files-2.1\7b396bb215b803305333f11cee85c0f1\jetified-firebase-firestore-22.0.0\AndroidManifest.xml:13:22-76
+14    <uses-permission android:name="android.permission.INTERNET" />
+14-->[com.google.firebase:firebase-firestore:22.0.0] C:\Users\14389\.gradle\caches\transforms-2\files-2.1\7b396bb215b803305333f11cee85c0f1\jetified-firebase-firestore-22.0.0\AndroidManifest.xml:14:5-67
+14-->[com.google.firebase:firebase-firestore:22.0.0] C:\Users\14389\.gradle\caches\transforms-2\files-2.1\7b396bb215b803305333f11cee85c0f1\jetified-firebase-firestore-22.0.0\AndroidManifest.xml:14:22-64
+15
+16    <application
+16-->C:\Users\14389\AndroidStudioProjects\MyQuizLocal\app\src\main\AndroidManifest.xml:5:5-25:19
+17        android:allowBackup="true"
+17-->C:\Users\14389\AndroidStudioProjects\MyQuizLocal\app\src\main\AndroidManifest.xml:6:9-35
+18        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+18-->[androidx.core:core:1.3.1] C:\Users\14389\.gradle\caches\transforms-2\files-2.1\cdfea8f3da9d3d8e26bbb73a40c2de98\core-1.3.1\AndroidManifest.xml:24:18-86
+19        android:debuggable="true"
+20        android:extractNativeLibs="false"
+21        android:icon="@mipmap/ic_launcher"
+21-->C:\Users\14389\AndroidStudioProjects\MyQuizLocal\app\src\main\AndroidManifest.xml:7:9-43
+22        android:label="@string/app_name"
+22-->C:\Users\14389\AndroidStudioProjects\MyQuizLocal\app\src\main\AndroidManifest.xml:8:9-41
+23        android:roundIcon="@mipmap/ic_launcher_round"
+23-->C:\Users\14389\AndroidStudioProjects\MyQuizLocal\app\src\main\AndroidManifest.xml:9:9-54
+24        android:supportsRtl="true"
+24-->C:\Users\14389\AndroidStudioProjects\MyQuizLocal\app\src\main\AndroidManifest.xml:10:9-35
+25        android:testOnly="true"
+26        android:theme="@style/Theme.MYQuiz" >
+26-->C:\Users\14389\AndroidStudioProjects\MyQuizLocal\app\src\main\AndroidManifest.xml:11:9-44
+27        <activity android:name="com.example.myquiz.ScoreActivity" />
+27-->C:\Users\14389\AndroidStudioProjects\MyQuizLocal\app\src\main\AndroidManifest.xml:12:9-60
+27-->C:\Users\14389\AndroidStudioProjects\MyQuizLocal\app\src\main\AndroidManifest.xml:12:19-48
+28        <activity android:name="com.example.myquiz.QuestionActivity" />
+28-->C:\Users\14389\AndroidStudioProjects\MyQuizLocal\app\src\main\AndroidManifest.xml:13:9-54
+28-->C:\Users\14389\AndroidStudioProjects\MyQuizLocal\app\src\main\AndroidManifest.xml:13:19-51
+29        <activity android:name="com.example.myquiz.SetsActivity" />
+29-->C:\Users\14389\AndroidStudioProjects\MyQuizLocal\app\src\main\AndroidManifest.xml:14:9-50
+29-->C:\Users\14389\AndroidStudioProjects\MyQuizLocal\app\src\main\AndroidManifest.xml:14:19-47
+30        <activity android:name="com.example.myquiz.CategoryActivity" />
+30-->C:\Users\14389\AndroidStudioProjects\MyQuizLocal\app\src\main\AndroidManifest.xml:15:9-54
+30-->C:\Users\14389\AndroidStudioProjects\MyQuizLocal\app\src\main\AndroidManifest.xml:15:19-51
+31        <activity android:name="com.example.myquiz.SplashActivity" >
+31-->C:\Users\14389\AndroidStudioProjects\MyQuizLocal\app\src\main\AndroidManifest.xml:16:9-22:20
+31-->C:\Users\14389\AndroidStudioProjects\MyQuizLocal\app\src\main\AndroidManifest.xml:16:19-49
+32            <intent-filter>
+32-->C:\Users\14389\AndroidStudioProjects\MyQuizLocal\app\src\main\AndroidManifest.xml:17:13-21:29
+33                <action android:name="android.intent.action.MAIN" />
+33-->C:\Users\14389\AndroidStudioProjects\MyQuizLocal\app\src\main\AndroidManifest.xml:18:17-69
+33-->C:\Users\14389\AndroidStudioProjects\MyQuizLocal\app\src\main\AndroidManifest.xml:18:25-66
+34
+35                <category android:name="android.intent.category.LAUNCHER" />
+35-->C:\Users\14389\AndroidStudioProjects\MyQuizLocal\app\src\main\AndroidManifest.xml:20:17-77
+35-->C:\Users\14389\AndroidStudioProjects\MyQuizLocal\app\src\main\AndroidManifest.xml:20:27-74
+36            </intent-filter>
+37        </activity>
+38        <activity android:name="com.example.myquiz.MainActivity" >
+38-->C:\Users\14389\AndroidStudioProjects\MyQuizLocal\app\src\main\AndroidManifest.xml:23:9-24:20
+38-->C:\Users\14389\AndroidStudioProjects\MyQuizLocal\app\src\main\AndroidManifest.xml:23:19-47
 39        </activity>
-40    </application>
-41
-42</manifest>
+40
+41        <service
+41-->[com.google.firebase:firebase-firestore:22.0.0] C:\Users\14389\.gradle\caches\transforms-2\files-2.1\7b396bb215b803305333f11cee85c0f1\jetified-firebase-firestore-22.0.0\AndroidManifest.xml:17:9-23:19
+42            android:name="com.google.firebase.components.ComponentDiscoveryService"
+42-->[com.google.firebase:firebase-firestore:22.0.0] C:\Users\14389\.gradle\caches\transforms-2\files-2.1\7b396bb215b803305333f11cee85c0f1\jetified-firebase-firestore-22.0.0\AndroidManifest.xml:18:13-84
+43            android:directBootAware="true"
+43-->[com.google.firebase:firebase-common:19.4.0] C:\Users\14389\.gradle\caches\transforms-2\files-2.1\5500978cd02395a8bf5bbed55985b128\jetified-firebase-common-19.4.0\AndroidManifest.xml:35:13-43
+44            android:exported="false" >
+44-->[com.google.firebase:firebase-firestore:22.0.0] C:\Users\14389\.gradle\caches\transforms-2\files-2.1\7b396bb215b803305333f11cee85c0f1\jetified-firebase-firestore-22.0.0\AndroidManifest.xml:19:13-37
+45            <meta-data
+45-->[com.google.firebase:firebase-firestore:22.0.0] C:\Users\14389\.gradle\caches\transforms-2\files-2.1\7b396bb215b803305333f11cee85c0f1\jetified-firebase-firestore-22.0.0\AndroidManifest.xml:20:13-22:85
+46                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+46-->[com.google.firebase:firebase-firestore:22.0.0] C:\Users\14389\.gradle\caches\transforms-2\files-2.1\7b396bb215b803305333f11cee85c0f1\jetified-firebase-firestore-22.0.0\AndroidManifest.xml:21:17-111
+47                android:value="com.google.firebase.components.ComponentRegistrar" />
+47-->[com.google.firebase:firebase-firestore:22.0.0] C:\Users\14389\.gradle\caches\transforms-2\files-2.1\7b396bb215b803305333f11cee85c0f1\jetified-firebase-firestore-22.0.0\AndroidManifest.xml:22:17-82
+48        </service>
+49
+50        <provider
+50-->[com.google.firebase:firebase-common:19.4.0] C:\Users\14389\.gradle\caches\transforms-2\files-2.1\5500978cd02395a8bf5bbed55985b128\jetified-firebase-common-19.4.0\AndroidManifest.xml:26:9-31:39
+51            android:name="com.google.firebase.provider.FirebaseInitProvider"
+51-->[com.google.firebase:firebase-common:19.4.0] C:\Users\14389\.gradle\caches\transforms-2\files-2.1\5500978cd02395a8bf5bbed55985b128\jetified-firebase-common-19.4.0\AndroidManifest.xml:27:13-77
+52            android:authorities="com.example.myquiz.firebaseinitprovider"
+52-->[com.google.firebase:firebase-common:19.4.0] C:\Users\14389\.gradle\caches\transforms-2\files-2.1\5500978cd02395a8bf5bbed55985b128\jetified-firebase-common-19.4.0\AndroidManifest.xml:28:13-72
+53            android:directBootAware="true"
+53-->[com.google.firebase:firebase-common:19.4.0] C:\Users\14389\.gradle\caches\transforms-2\files-2.1\5500978cd02395a8bf5bbed55985b128\jetified-firebase-common-19.4.0\AndroidManifest.xml:29:13-43
+54            android:exported="false"
+54-->[com.google.firebase:firebase-common:19.4.0] C:\Users\14389\.gradle\caches\transforms-2\files-2.1\5500978cd02395a8bf5bbed55985b128\jetified-firebase-common-19.4.0\AndroidManifest.xml:30:13-37
+55            android:initOrder="100" />
+55-->[com.google.firebase:firebase-common:19.4.0] C:\Users\14389\.gradle\caches\transforms-2\files-2.1\5500978cd02395a8bf5bbed55985b128\jetified-firebase-common-19.4.0\AndroidManifest.xml:31:13-36
+56
+57        <activity
+57-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\14389\.gradle\caches\transforms-2\files-2.1\4d0717210b0687cad87212665e90c4c5\jetified-play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
+58            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+58-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\14389\.gradle\caches\transforms-2\files-2.1\4d0717210b0687cad87212665e90c4c5\jetified-play-services-base-17.0.0\AndroidManifest.xml:24:13-79
+59            android:exported="false"
+59-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\14389\.gradle\caches\transforms-2\files-2.1\4d0717210b0687cad87212665e90c4c5\jetified-play-services-base-17.0.0\AndroidManifest.xml:25:13-37
+60            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+60-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\14389\.gradle\caches\transforms-2\files-2.1\4d0717210b0687cad87212665e90c4c5\jetified-play-services-base-17.0.0\AndroidManifest.xml:26:13-72
+61
+62        <meta-data
+62-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\14389\.gradle\caches\transforms-2\files-2.1\c03ff831f337462821d0a5c03495569e\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+63            android:name="com.google.android.gms.version"
+63-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\14389\.gradle\caches\transforms-2\files-2.1\c03ff831f337462821d0a5c03495569e\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
+64            android:value="@integer/google_play_services_version" />
+64-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\14389\.gradle\caches\transforms-2\files-2.1\c03ff831f337462821d0a5c03495569e\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+65    </application>
+66
+67</manifest>
