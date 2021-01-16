@@ -1496,6 +1496,8 @@ id actions
 id activity_chooser_view_content
 id add
 id addCatB
+id addQB
+id addSetB
 id adjust_height
 id adjust_width
 id alertTitle
@@ -1547,6 +1549,8 @@ id dimensions
 id direct
 id disableHome
 id dropdown_menu
+id ec_add_button
+id ec_cat_name
 id edit_query
 id email
 id end
@@ -1647,11 +1651,14 @@ id pin
 id progressBar
 id progress_circular
 id progress_horizontal
+id q_toolbar
+id quest_recycler
 id radio
 id right
 id right_icon
 id right_side
 id rounded
+id sa_toolbar
 id save_non_transition_alpha
 id save_overlay_view
 id scale
@@ -1673,6 +1680,7 @@ id search_src_text
 id search_voice_btn
 id select_dialog_listview
 id selected
+id sets_recycler
 id shortcut
 id showCustom
 id showHome
@@ -1806,6 +1814,8 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_category
 layout activity_main
+layout activity_questions
+layout activity_sets
 layout add_category_dialog
 layout cat_item_layout
 layout custom_dialog
@@ -1824,6 +1834,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout edit_category_layout
 layout loading_progressbar
 layout mtrl_alert_dialog
 layout mtrl_alert_dialog_actions
@@ -2377,6 +2388,7 @@ style Theme_AppCompat_Light_Dialog_MinWidth
 style Theme_AppCompat_Light_DialogWhenLarge
 style Theme_AppCompat_Light_NoActionBar
 style Theme_AppCompat_NoActionBar
+style Theme_Basics
 style Theme_Design
 style Theme_Design_BottomSheetDialog
 style Theme_Design_Light

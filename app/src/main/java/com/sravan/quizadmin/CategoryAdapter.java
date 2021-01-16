@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.util.ArrayMap;
 import android.view.LayoutInflater;
@@ -15,7 +16,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -26,10 +26,13 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.List;
 import java.util.Map;
 
-public class    CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHolder> {
+
+
+public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHolder> {
 
     private List<CategoryModel> cat_list;
-    public CategoryAdapter(List<CategoryModel> cat_list) {
+    public CategoryAdapter(List<CategoryModel> cat_list)
+    {
         this.cat_list = cat_list;
     }
 
@@ -43,11 +46,12 @@ public class    CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Vie
     @Override
     public void onBindViewHolder(@NonNull CategoryAdapter.ViewHolder holder, int position) {
         String title = cat_list.get(position).getName();
-        holder.setData(title,position, this);
+        holder.setData(title, position, this);
     }
 
     @Override
     public int getItemCount() {
+
         return cat_list.size();
     }
 
@@ -85,6 +89,9 @@ public class    CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Vie
             itemView.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override
                 public boolean onLongClick(View view) {
+                    CategoryActivity.selected_cat_index = position;
+                    Intent intent =  new Intent(itemView.getContext(),SetsActivity.class);
+                    itemView.getContext().startActivity(intent);
                     editCatName.setText(cat_list.get(position).getName());
                     editDialog.show();
                     return false;

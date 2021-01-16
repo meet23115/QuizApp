@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\DELL\\AndroidStudioProjects\\QuizApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v17\\values-v17.xml",
+            "outputFile": "C:\\Users\\14389\\AndroidStudioProjects\\QuizAdmin\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v17\\values-v17.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\DELL\\.gradle\\caches\\transforms-2\\files-2.1\\1ad22339d77520f6259d6f3d4bd5b1bc\\appcompat-1.1.0\\res\\values-v17\\values-v17.xml",
+                    "source": "C:\\Users\\14389\\.gradle\\caches\\transforms-2\\files-2.1\\1ad22339d77520f6259d6f3d4bd5b1bc\\appcompat-1.1.0\\res\\values-v17\\values-v17.xml",
                     "from": {
                         "startLines": "2,5,9,12,15,18,22,25,29,33,37,40,43,46,50,53,57",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

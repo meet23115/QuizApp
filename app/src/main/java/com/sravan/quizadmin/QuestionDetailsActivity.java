@@ -1,0 +1,163 @@
+package com.sravan.quizadmin;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
+import android.app.Dialog;
+import android.os.Bundle;
+import android.util.ArrayMap;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.Map;
+
+import static com.sravan.quizadmin.CategoryActivity.catList;
+import static com.sravan.quizadmin.CategoryActivity.selected_cat_index;
+import static com.sravan.quizadmin.QuestionsActivity.quesList;
+import static com.sravan.quizadmin.SetsActivity.selected_set_index;
+import static com.sravan.quizadmin.SetsActivity.setsIDs;
+
+public class QuestionDetailsActivity extends AppCompatActivity {
+
+    private EditText ques, optionA, optionB, optionC, optionD, answer;
+    private Button addQB;
+    private String qStr, aStr, bStr, cStr, dStr, ansStr;
+    private Dialog loadingDialog;
+    private FirebaseFirestore firestore;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_question_details);
+
+        Toolbar toolbar = findViewById(R.id.qdetails_toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Question " + String.valueOf(quesList.size() + 1));
+
+        ques = findViewById(R.id.question);
+        optionA = findViewById(R.id.optionA);
+        optionB = findViewById(R.id.optionB);
+        optionC = findViewById(R.id.optionC);
+        optionD = findViewById(R.id.optionD);
+        answer = findViewById(R.id.answer);
+        addQB = findViewById(R.id.addQB);
+
+        loadingDialog = new Dialog(QuestionDetailsActivity.this);
+        loadingDialog.setContentView(R.layout.loading_progressbar);
+        loadingDialog.setCancelable(false);
+        loadingDialog.getWindow().setBackgroundDrawableResource(R.drawable.progress_background);
+        loadingDialog.getWindow().setLayout(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+
+        firestore = FirebaseFirestore.getInstance();
+
+        addQB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                qStr = ques.getText().toString();
+                aStr = optionA.getText().toString();
+                bStr = optionB.getText().toString();
+                cStr = optionC.getText().toString();
+                dStr = optionD.getText().toString();
+                ansStr = answer.getText().toString();
+
+                if(qStr.isEmpty()){
+                    ques.setError("Enter Question");
+                    return;
+                }
+
+                if(aStr.isEmpty()){
+                    optionA.setError("Enter option A");
+                    return;
+                }
+                if(bStr.isEmpty()){
+                    optionB.setError("Enter option B");
+                    return;
+                }
+                if(cStr.isEmpty()){
+                    optionC.setError("Enter option C");
+                    return;
+                }
+                if(dStr.isEmpty()){
+                    optionD.setError("Enter option D");
+                    return;
+                }
+                if(ansStr.isEmpty()){
+                    answer.setError("Enter Correct Answer");
+                    return;
+                }
+
+                addNewQuestion();
+
+            }
+        });
+
+    }
+
+    private void addNewQuestion()
+    {
+        loadingDialog.show();
+
+        Map<String,Object> quesData = new ArrayMap<>();
+        quesData.put("QUESTION",qStr);
+        quesData.put("A",aStr);
+        quesData.put("B",bStr);
+        quesData.put("C",cStr);
+        quesData.put("D",dStr);
+        quesData.put("ANSWER",ansStr);
+
+        String doc_id = firestore.collection("QUIZ").document(catList.get(selected_cat_index).getId())
+                .collection(setsIDs.get(selected_set_index)).document().getId();
+
+        firestore.collection("QUIZ").document(catList.get(selected_cat_index).getId())
+                .collection(setsIDs.get(selected_set_index)).document(doc_id)
+                .set(quesData)
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        Map<String,Object> quesDoc = new ArrayMap<>();
+                        quesDoc.put("Q" + String.valueOf(quesList.size() + 1) + "ID", doc_id);
+                        quesDoc.put("COUNT",String.valueOf(quesList.size() + 1));
+
+                        firestore.collection("QUIZ").document(catList.get(selected_cat_index).getId())
+                                .collection(setsIDs.get(selected_set_index)).document("QUESTION_LIST")
+                                .update(quesDoc)
+                                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                    @Override
+                                    public void onSuccess(Void aVoid) {
+                                        Toast.makeText(QuestionDetailsActivity.this , "Question Added Successfully" , Toast.LENGTH_SHORT).show();
+
+                                        quesList.add(new QuestionModel(
+                                                doc_id,
+                                                qStr, aStr, bStr, cStr, dStr, Integer.valueOf(ansStr)
+                                        ));
+
+                                        loadingDialog.dismiss();
+                                        QuestionDetailsActivity.this.finish();
+                                    }
+                                })
+                                .addOnFailureListener(new OnFailureListener() {
+                                    @Override
+                                    public void onFailure(@NonNull Exception e) {
+                                        Toast.makeText(QuestionDetailsActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                                    }
+                                });
+
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(QuestionDetailsActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+    }
+}

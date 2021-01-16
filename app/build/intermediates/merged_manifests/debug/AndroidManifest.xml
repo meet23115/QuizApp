@@ -25,6 +25,8 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.QuizAdmin" >
+        <activity android:name="com.sravan.quizadmin.QuestionsActivity" />
+        <activity android:name="com.sravan.quizadmin.SetsActivity" />
         <activity android:name="com.sravan.quizadmin.CategoryActivity" />
         <activity android:name="com.sravan.quizadmin.MainActivity" >
             <intent-filter>
